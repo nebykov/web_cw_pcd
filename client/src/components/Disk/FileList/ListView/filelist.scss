@@ -1,0 +1,30 @@
+@import '../../../../utils/variables';
+
+.fileList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 4fr repeat(4, 1fr);
+        border-bottom: 1px solid $primary-light;
+        color: $primary-light;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 15px;
+
+        .name {
+            grid-column-start: 2;
+        }
+
+        .date {
+            grid-column-start: 5;
+            justify-self: center;
+        }
+
+        .size {
+            justify-self: center;
+        }
+    }
+}

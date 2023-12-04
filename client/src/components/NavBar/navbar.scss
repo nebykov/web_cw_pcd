@@ -1,0 +1,56 @@
+@import "../../utils/variables";
+
+.navbar {
+    width: 100%;
+    background-color: $secondary-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.46);
+    box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.46);
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        gap: 6px;
+
+        img {
+            width: 100px;
+            object-fit: cover;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-size: 15px;
+            font-weight: 700;
+            color: $primary-main;
+            background: $secondary-light;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 40ms ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.nav_wrapper {
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

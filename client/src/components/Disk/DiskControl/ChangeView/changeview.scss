@@ -1,0 +1,19 @@
+@import '../../../../utils/variables';
+
+.changeView {
+    display: flex;
+    font-size: 25px;
+    color: $primary-light;
+
+    svg {
+        cursor: pointer;
+        transition: all 40ms ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "../../utils/variables";
+
+.diskPage {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 15px;
+     width: 100%;
+     margin-top: 10px;
+    
+     &__title {
+        justify-self: center;   
+        color: $primary-main;
+     }
+
+}
+
+.dragSection {
+    width: 100%;
+    height: calc(100vh - 120px);
+    font-size: 30px;
+    color: $primary-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px dashed $primary-light;
+    margin: 20px;
+    font-weight: 700;
+    transition: all 40ms ease-in-out;
+}

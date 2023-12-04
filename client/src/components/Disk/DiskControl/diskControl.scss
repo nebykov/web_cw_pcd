@@ -1,0 +1,116 @@
+@import '../../../utils/variables';
+
+
+.diskControl {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .arrow {
+        width: 60px;
+        height: 25px;
+        border: 1px solid $primary-main;
+        border-radius: 5px;
+        color: $primary-light;
+        cursor: pointer;
+        transition: all 50ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1.0);
+        }
+    }
+
+    .disable {
+        opacity: 0.7;
+        cursor: auto;
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    .createPanel {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        &__nav {
+            display: flex;
+            gap: 5px;
+
+            .sort {
+                color: $primary-main;
+                outline-color: $primary-light;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__creating {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+
+     .creatingForm {
+        display: flex;
+        gap: 7px;
+        .done {
+            border: 1px solid $primary-light;
+            padding: 9px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: $primary-light;
+            transition: all 50ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &:active {
+                transform: scale(1);
+            }
+         }
+     }
+    }
+
+    &__btn {
+        display: flex;
+        width: 150px;
+        gap: 3px;
+        align-items: center;
+        justify-content: center;
+        background: $primary-light;
+        height: 40px;
+        border-radius: 4px;
+        color: $primary-contrastText;
+        cursor: pointer;
+        transition: all 50ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(1.0);
+        }
+    }
+
+
+    .active {
+        background: $primary-main;
+        border: 3px solid $primary-light;
+    }
+
+
+ }

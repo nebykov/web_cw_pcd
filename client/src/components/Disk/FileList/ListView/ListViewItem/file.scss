@@ -1,0 +1,97 @@
+@import "../../../../../utils/variables";
+
+.fileItem {
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    border-bottom: 1px solid $primary-light;
+    color: $primary-light;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 50ms ease-in-out;
+
+
+    .fileName {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+
+        span {
+            margin-right: 20px;
+        }
+
+        .name:hover {
+            transition: all 200ms ease-in-out;
+            text-decoration: underline;
+        }
+
+       svg {
+        font-size: 40px;
+        transition: all 50ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+       }
+    }
+
+    .date {
+        grid-column-start: 5;
+        justify-self: center;
+    }
+
+    .size {
+        justify-self: center;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-light;
+        color: $primary-contrastText;
+        gap: 4px;
+        padding: 5px;
+        display: none;
+        opacity: 0;
+        margin-left: 6px;
+        transition: all 10ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &:hover {
+          .fileItem__download {
+            display: flex;
+            opacity: 1;
+            grid-column-start: 5;
+          }
+
+          .fileItem__delete {
+            display: flex;
+            opacity: 1;
+            grid-column-start: 6;
+          }
+
+          .dateHover {
+           display: none;
+        }
+    
+        .size {
+            display: none;
+        }
+          
+    }
+}

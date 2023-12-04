@@ -1,0 +1,27 @@
+@import '../../../utils/variables';
+
+.search {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    gap: 3px;
+
+    svg {
+        border-radius: 3px;
+        background-color: $primary-light;
+        padding: 7px;
+        height: 39px;
+        width: 39px;
+        cursor: pointer;
+        transition: transform 40ms ease-in-out;
+        color: $primary-contrastText;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+}
